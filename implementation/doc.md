@@ -24,3 +24,11 @@ curl -X POST "http://localhost:8000/api/consent" \
     "data_types": ["LabResult", "Diagnosis"],
     "processing_type": "aggregation"
   }'
+
+
+POST /api/credentials/issue      # Issue a medical credential
+POST /api/consent                # Create a consent agreement
+POST /api/zkp/generate           # Generate a zero-knowledge proof
+POST /api/queries/execute        # Run privacy-preserving query
+GET  /api/schemas                # Get all data schemas
+POST /api/demo/token             # Get a demo token (testing)
