@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "source_type": "wearable",
+    "source_id": "apple_watch_series_8",
+    "subject_id": "user_001",
+    "stream_id": "stream_d490ba50",
+    "created_at": "2026-02-04T14:45:13.821727+00:00",
+    "updated_at": "2026-02-04T14:45:13.821727+00:00",
+    "privacy_level": "pseudonymized",
+    "quality_level": "validated",
+    "schema_version": "1.0.0",
+    "tags": [
+      "demo",
+      "wearable",
+      "health_tracking"
+    ],
+    "geo_region": null,
+    "timezone": "UTC"
+  },
+  "processed": [
+    {
+      "timestamp": "2026-02-04T14:45:13.821727+00:00",
+      "value": 72.5,
+      "unit": "bpm",
+      "confidence": 0.95,
+      "metadata": {
+        "source": "apple_watch",
+        "reading_type": "resting",
+        "device_id": "AW123456",
+        "subject_name": "John Doe",
+        "processed_at": "2026-02-04T14:45:13.826725+00:00",
+        "quality_processor": "QualityEnhancer",
+        "privacy_applied": "pseudonymized",
+        "privacy_timestamp": "2026-02-04T14:45:13.826725+00:00",
+        "pipeline_version": "2.0.0",
+        "stream_id": "stream_d490ba50"
+      }
+    },
+    {
+      "timestamp": "2026-02-04T14:45:13.821727+00:00",
+      "value": 98.2,
+      "unit": "%",
+      "confidence": 0.92,
+      "metadata": {
+        "source": "apple_watch",
+        "reading_type": "resting",
+        "device_id": "AW123456",
+        "subject_name": "John Doe",
+        "processed_at": "2026-02-04T14:45:13.827725+00:00",
+        "quality_processor": "QualityEnhancer",
+        "privacy_applied": "pseudonymized",
+        "privacy_timestamp": "2026-02-04T14:45:13.827725+00:00",
+        "pipeline_version": "2.0.0",
+        "stream_id": "stream_d490ba50"
+      }
+    },
+    {
+      "timestamp": "2026-02-04T14:45:13.821727+00:00",
+      "value": 36.8,
+      "unit": "°C",
+      "confidence": 0.98,
+      "metadata": {
+        "source": "smart_thermometer",
+        "reading_type": "body",
+        "device_id": "THERMO001",
+        "subject_name": "John Doe",
+        "processed_at": "2026-02-04T14:45:13.827725+00:00",
+        "quality_processor": "QualityEnhancer",
+        "privacy_applied": "pseudonymized",
+        "privacy_timestamp": "2026-02-04T14:45:13.827725+00:00",
+        "pipeline_version": "2.0.0",
+        "stream_id": "stream_d490ba50"
+      }
+    },
+    {
+      "timestamp": "2026-02-04T14:45:13.821727+00:00",
+      "value": 12000,
+      "unit": "steps",
+      "confidence": 0.88,
+      "metadata": {
+        "source": "apple_watch",
+        "reading_type": "daily_total",
+        "device_id": "AW123456",
+        "subject_name": "John Doe",
+        "processed_at": "2026-02-04T14:45:13.827725+00:00",
+        "quality_processor": "QualityEnhancer",
+        "privacy_applied": "pseudonymized",
+        "privacy_timestamp": "2026-02-04T14:45:13.827725+00:00",
+        "pipeline_version": "2.0.0",
+        "stream_id": "stream_d490ba50"
+      }
+    },
+    {
+      "timestamp": "2026-02-04T14:45:13.821727+00:00",
+      "value": 7.5,
+      "unit": "hours",
+      "confidence": 0.75,
+      "metadata": {
+        "source": "sleep_tracker",
+        "reading_type": "sleep_duration",
+        "device_id": "SLEEP001",
+        "subject_name": "John Doe",
+        "processed_at": "2026-02-04T14:45:13.827725+00:00",
+        "quality_processor": "QualityEnhancer",
+        "privacy_applied": "pseudonymized",
+        "privacy_timestamp": "2026-02-04T14:45:13.827725+00:00",
+        "pipeline_version": "2.0.0",
+        "stream_id": "stream_d490ba50"
+      }
+    }
+  ],
+  "failed": [],
+  "statistics": {
+    "count": 5,
+    "mean": 2443.0,
+    "std": 4778.599480600985,
+    "min": 7.5,
+    "max": 12000.0,
+    "median": 72.5,
+    "q1": 36.8,
+    "q3": 98.2
+  },
+  "processing_timestamp": "2026-02-04T14:45:13.822726+00:00",
+  "pipeline_version": "2.0.0"
+}

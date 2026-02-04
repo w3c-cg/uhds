@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "source_type": "wearable",
+    "source_id": "demo_device_001",
+    "subject_id": "demo_subject_001",
+    "stream_id": "stream_cec2e913",
+    "created_at": "2026-02-04 14:39:50.157004+00:00",
+    "updated_at": "2026-02-04 14:39:50.157004+00:00",
+    "privacy_level": "pseudonymized",
+    "quality_level": "raw",
+    "schema_version": "1.0.0",
+    "tags": [
+      "demo",
+      "test",
+      "wearable"
+    ],
+    "geo_region": null,
+    "timezone": "UTC"
+  },
+  "processed": [
+    {
+      "timestamp": "2026-02-04 14:39:50.157004+00:00",
+      "value": 72.5,
+      "unit": "bpm",
+      "confidence": 0.95,
+      "metadata": {
+        "source": "demo_hr_monitor",
+        "reading_type": "resting",
+        "processed_at": "2026-02-04T14:39:50.158003+00:00",
+        "quality_processor": "QualityEnhancer",
+        "privacy_applied": "pseudonymized",
+        "pipeline_version": "1.0.0"
+      }
+    },
+    {
+      "timestamp": "2026-02-04 14:39:50.157004+00:00",
+      "value": 98.2,
+      "unit": "%",
+      "confidence": 0.92,
+      "metadata": {
+        "source": "demo_spo2_monitor",
+        "reading_type": "resting",
+        "processed_at": "2026-02-04T14:39:50.158003+00:00",
+        "quality_processor": "QualityEnhancer",
+        "privacy_applied": "pseudonymized",
+        "pipeline_version": "1.0.0"
+      }
+    },
+    {
+      "timestamp": "2026-02-04 14:39:50.157004+00:00",
+      "value": 36.8,
+      "unit": "\u00b0C",
+      "confidence": 0.98,
+      "metadata": {
+        "source": "demo_thermometer",
+        "reading_type": "body",
+        "processed_at": "2026-02-04T14:39:50.158003+00:00",
+        "quality_processor": "QualityEnhancer",
+        "privacy_applied": "pseudonymized",
+        "pipeline_version": "1.0.0"
+      }
+    }
+  ],
+  "failed": [],
+  "statistics": {
+    "count": 3,
+    "mean": 69.16666666666667,
+    "std": 25.177017738847116,
+    "min": 36.8,
+    "max": 98.2,
+    "median": 72.5
+  }
+}
