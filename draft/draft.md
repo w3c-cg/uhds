@@ -1,6 +1,3 @@
-Based on your mission statement and scope, I'll create a comprehensive W3C Community Group Draft Report that aligns with your focus on Verifiable Credentials (VCs) and Zero-Knowledge Proofs (ZKPs) for medical data. Here's the integrated specification:
-
-```markdown
 # Universal Health Data Schemas with Verifiable Credentials
 ## W3C Community Group Draft Report
 
