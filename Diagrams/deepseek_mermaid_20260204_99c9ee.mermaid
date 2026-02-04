@@ -1,0 +1,27 @@
+stateDiagram-v2
+    [*] --> DataCollected : Patient data captured
+    DataCollected --> CredentialIssued : Hospital signs VC
+    
+    state CredentialIssued {
+        [*] --> StoredInWallet
+        StoredInWallet --> ConsentConfigured : Patient reviews
+        ConsentConfigured --> ActiveConsent : Policies set
+    }
+    
+    ActiveConsent --> QueryReceived : Researcher requests
+    QueryReceived --> ProofGenerated : ZKP created
+    
+    state ProofGenerated {
+        [*] --> ValidationPassed
+        ValidationPassed --> ComputationExecuted
+        ComputationExecuted --> ResultsReturned
+    }
+    
+    ResultsReturned --> InsightsGenerated : Analysis complete
+    InsightsGenerated --> ResearchPublished : Findings shared
+    
+    ResearchPublished --> ConsentExpired : Time limit reached
+    ConsentExpired --> [*] : Process complete
+    
+    ActiveConsent --> ConsentRevoked : Patient withdraws
+    ConsentRevoked --> [*] : Access terminated

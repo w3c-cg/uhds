@@ -1,0 +1,46 @@
+sequenceDiagram
+    participant P as Patient/User
+    participant D as Data Sources
+    participant H as Hospital/Issuer
+    participant W as Smart Wallet
+    participant R as Researcher
+    participant A as Analytics Engine
+    participant M as AI Model
+
+    Note over P,H: Phase 1: Data Creation & Capture
+    D->>H: EHR Data Stream
+    D->>H: Wearable/IoT Data
+    P->>H: Patient-Reported Data
+    H->>H: Data Normalization & Validation
+    
+    Note over H,W: Phase 2: Credential Issuance
+    H->>P: Request Issuance Consent
+    P->>H: Grant Consent
+    H->>W: Issue Verifiable Credentials
+    W->>W: Store & Organize Credentials
+    
+    Note over W,R: Phase 3: Consent Management
+    R->>P: Research Participation Request
+    P->>W: Review & Configure Consent
+    W->>R: Grant Limited Access Tokens
+    W->>P: Consent Notifications & Updates
+    
+    Note over R,A: Phase 4: Privacy-Preserving Analytics
+    R->>A: Submit Privacy-Preserving Query
+    A->>W: Request ZKP/Selective Disclosure
+    W->>A: Generate Zero-Knowledge Proofs
+    A->>A: Execute Secure Computation
+    A->>R: Return Aggregated Results
+    
+    Note over A,M: Phase 5: AI Model Training
+    A->>M: Provide Privacy-Preserving Features
+    M->>M: Federated Learning Process
+    M->>A: Request Additional Computations
+    A->>M: Return Secure Updates
+    M->>M: Aggregate Model Updates
+    
+    Note over M,R: Phase 6: Research Results
+    M->>R: Trained AI Model/Insights
+    R->>R: Validate & Analyze Results
+    R->>P: Share Personalized Insights
+    R->>Public: Publish Research Findings

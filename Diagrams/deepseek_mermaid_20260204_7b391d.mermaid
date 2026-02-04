@@ -1,0 +1,69 @@
+classDiagram
+    class DataSources {
+        <<interface>>
+        +EHRSystems
+        +WearableDevices
+        +IoTMedicalDevices
+        +PatientPortals
+        +captureData()
+        +validateData()
+    }
+    
+    class CredentialIssuer {
+        <<component>>
+        +HospitalSystem
+        +LabInformationSystem
+        +TrustedSourceRegistry
+        +normalizeData()
+        +transformPrivacy()
+        +generateVC()
+        +signCredentials()
+    }
+    
+    class ConsentManager {
+        <<component>>
+        +SmartWallet
+        +ConsentRepository
+        +PolicyEngine
+        +storeCredentials()
+        +manageConsent()
+        +generateAccessTokens()
+        +auditAccess()
+    }
+    
+    class PrivacyAnalytics {
+        <<component>>
+        +ZKPEngine
+        +SMPCProtocol
+        +QueryProcessor
+        +executePrivacyQuery()
+        +generateProofs()
+        +aggregateResults()
+    }
+    
+    class AITraining {
+        <<component>>
+        +FederatedLearningCoordinator
+        +ModelRegistry
+        +TrainingOrchestrator
+        +trainModel()
+        +aggregateUpdates()
+        +validateModel()
+    }
+    
+    class ResearchOutput {
+        <<component>>
+        +PublicationSystem
+        +AlertGenerator
+        +Dashboard
+        +generateInsights()
+        +publishResults()
+        +sendAlerts()
+    }
+    
+    DataSources --> CredentialIssuer : provides raw data
+    CredentialIssuer --> ConsentManager : issues verifiable credentials
+    ConsentManager --> PrivacyAnalytics : provides consent-based access
+    PrivacyAnalytics --> AITraining : provides privacy-preserving features
+    AITraining --> ResearchOutput : provides trained models/insights
+    PrivacyAnalytics --> ResearchOutput : provides analytical results

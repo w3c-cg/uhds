@@ -1,0 +1,54 @@
+flowchart TD
+    subgraph A[Data Creation & Capture]
+        A1[EHR Systems] --> A2[Data Aggregation]
+        A3[Wearables] --> A2
+        A4[IoT Devices] --> A2
+    end
+    
+    subgraph B[Credential Issuance]
+        A2 --> B1[Data Normalization]
+        B1 --> B2[Privacy Transformations]
+        B2 --> B3[VC Generation]
+        B3 --> B4[Digital Signing]
+    end
+    
+    subgraph C[Consent Management]
+        B4 --> C1[Patient Wallet Storage]
+        C1 --> C2[Consent Configuration]
+        C2 --> C3[Access Policy Definition]
+        C3 --> C4[Consent Token Issuance]
+    end
+    
+    subgraph D[Privacy-Preserving Analytics]
+        C4 --> D1[Query Submission]
+        D1 --> D2[ZKP Generation]
+        D2 --> D3[Secure Computation]
+        D3 --> D4[Result Aggregation]
+    end
+    
+    subgraph E[AI Model Training]
+        D4 --> E1[Feature Preparation]
+        E1 --> E2[Federated Learning]
+        E2 --> E3[Model Aggregation]
+        E3 --> E4[Validation & Testing]
+    end
+    
+    subgraph F[Research Results]
+        E4 --> F1[Insight Generation]
+        D4 --> F2[Statistical Analysis]
+        F1 --> F3[Publication]
+        F2 --> F3
+        F1 --> F4[Clinical Alerts]
+        F2 --> F5[Public Health Reports]
+    end
+    
+    F3 --> G[Knowledge Base]
+    F4 --> H[Healthcare Providers]
+    F5 --> I[Public Health Authorities]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style C fill:#e8f5e8
+    style D fill:#fff3e0
+    style E fill:#fce4ec
+    style F fill:#e8eaf6
