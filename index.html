@@ -11,13 +11,13 @@
             shortName: "uhds",
             latestVersion: "https://w3id.org/uhds/spec",
             edDraftURI: "https://uhds-standards.github.io/spec/",
-            crEnd: "2024-06-30",
-            prEnd: "2024-09-30",
-            recEnd: "2024-12-31",
+            crEnd: "2026-06-30",
+            prEnd: "2026-09-30",
+            recEnd: "2026-12-31",
             
             // Strategic positioning
             subtitle: "A Verifiable Credentials Framework for Privacy-Preserving Health Data Exchange",
-            publishDate: "2024-01-15",
+            publishDate: "2026-01-15",
             previousPublishDate: null,
             previousMaturity: null,
             
@@ -91,7 +91,7 @@
             }],
             
             // Legal & IP
-            copyrightStart: "2024",
+            copyrightStart: "2026",
             license: "w3c-software-doc",
             xref: {
                 specs: [
@@ -550,7 +550,7 @@
   "id": "urn:uuid:98c5cffc-7b48-4d5a-9a8a-123456789abc",
   "type": ["VerifiableCredential", "HealthCredential", "LabResult"],
   "issuer": "did:web:lab.hospital.example",
-  "issuanceDate": "2024-01-15T08:30:00Z",
+  "issuanceDate": "2026-01-15T08:30:00Z",
   "credentialSubject": {
     "id": "did:example:patient123",
     "testType": "https://loinc.org/4548-4",
@@ -575,7 +575,7 @@
   },
   "proof": {
     "type": "Ed25519Signature2020",
-    "created": "2024-01-15T08:30:00Z",
+    "created": "2026-01-15T08:30:00Z",
     "verificationMethod": "did:web:lab.hospital.example#key-1",
     "proofPurpose": "assertionMethod",
     "proofValue": "z58DAdFfa9SkqZMVPxAQpic7ndSayn1PzZs6ZjWp1CktyGesjuTSwRdoWhAfGFCF5bppETSTojQCrfFPP2oumHKtz"
@@ -1074,7 +1074,7 @@ Authorization: Bearer &lt;issuer_token&gt;
     "testType": "https://loinc.org/4548-4",
     "result": 5.8,
     "unit": "%",
-    "collectionDateTime": "2024-01-15T07:00:00Z"
+    "collectionDateTime": "2026-01-15T07:00:00Z"
   },
   "options": {
     "privacyLevel": "pseudonymous",
@@ -1094,13 +1094,13 @@ Location: /api/v1/credentials/urn:uuid:98c5cffc-7b48-4d5a-9a8a-123456789abc
     "id": "urn:uuid:98c5cffc-7b48-4d5a-9a8a-123456789abc",
     "type": ["VerifiableCredential", "LabResult"],
     "issuer": "did:web:api.healthsystem.example",
-    "issuanceDate": "2024-01-15T08:30:00Z",
+    "issuanceDate": "2026-01-15T08:30:00Z",
     "credentialSubject": {...},
     "proof": {...}
   },
   "metadata": {
-    "issued": "2024-01-15T08:30:00Z",
-    "expires": "2024-04-15T08:30:00Z",
+    "issued": "2026-01-15T08:30:00Z",
+    "expires": "2026-04-15T08:30:00Z",
     "privacyLevel": "pseudonymous",
     "revocationIndex": "12345"
   }
@@ -1185,14 +1185,14 @@ Content-Type: application/json
     "publicInputs": {
       "min": 6.5,
       "max": 8.0,
-      "timestamp": "2024-01-15T09:00:00Z"
+      "timestamp": "2026-01-15T09:00:00Z"
     },
     "proofValue": "z3t4F...abC9X",
     "verificationKey": "https://w3id.org/uhds/keys/range_proof_vk"
   },
   "metadata": {
-    "generated": "2024-01-15T09:00:00Z",
-    "expires": "2024-01-22T09:00:00Z",
+    "generated": "2026-01-15T09:00:00Z",
+    "expires": "2026-01-22T09:00:00Z",
     "privacyLevel": "zero_knowledge"
   }
 }</pre>
@@ -1824,7 +1824,7 @@ Authorization: Bearer &lt;researcher_token&gt;
     "sharing": false
   },
   "constraints": {
-    "validUntil": "2024-12-31T23:59:59Z",
+    "validUntil": "2026-12-31T23:59:59Z",
     "maxQueries": 100,
     "privacyBudget": {
       "epsilon": 2.0,
@@ -2036,7 +2036,7 @@ Authorization: Bearer &lt;researcher_token&gt;
                 <tbody>
                     <tr>
                         <td>1.0.0-draft</td>
-                        <td>2024-01-15</td>
+                        <td>2026-01-15</td>
                         <td>Initial Community Group Draft</td>
                         <td>Irtiqa Lateef</td>
                     </tr>
