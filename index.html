@@ -9,118 +9,46 @@
         var respecConfig = {
             specStatus: "CG-DRAFT",
             shortName: "uhds",
-            latestVersion: "https://w3id.org/uhds/spec",
-            edDraftURI: "https://uhds-standards.github.io/spec/",
-            crEnd: "2026-06-30",
-            prEnd: "2026-09-30",
-            recEnd: "2026-12-31",
+            latestVersion: null,
+            edDraftURI: "https://w3c.github.io/uhds/spec/",
             
-            // Strategic positioning
             subtitle: "A Verifiable Credentials Framework for Privacy-Preserving Health Data Exchange",
-            publishDate: "2026-01-15",
+            publishDate: "2024-01-01",
             previousPublishDate: null,
             previousMaturity: null,
             
-            // Leadership team - shows serious governance
             editors: [{
-                name: "Irtiqa Lateef",
-                url: "https://www.linkedin.com/in/irtiqalateef",
-                company: "UHDS Foundation",
-                companyURL: "https://w3id.org/uhds",
-                w3cid: "TBD",
-                note: "Primary Editor & Architect"
-            }, {
-                name: "Dr. Amir Hameed Mir",
-                url: "https://medicalleadership.example",
-                company: "Healthcare Standards Institute",
-                companyURL: "https://hs-institute.org",
-                w3cid: "TBD",
-                note: "Clinical Validation Chair"
-            }, {
-                name: "Prof. Maria Chen",
-                url: "https://stanford.edu/~mchen",
-                company: "Stanford Center for Biomedical Informatics",
-                companyURL: "https://med.stanford.edu/bmi",
-                w3cid: "TBD",
-                note: "Privacy & Security Chair"
-            }, {
-                name: "Kenji Tanaka",
-                url: "https://research.example/ktanaka",
-                company: "W3C Healthcare Schema CG",
-                companyURL: "https://www.w3.org/community/health-schema/",
-                w3cid: "TBD",
-                note: "Liaison to W3C Healthcare CG"
+                name: "Amir Hameed Mir",
+                company: "UHDS Community Group",
+                companyURL: "https://www.w3.org/community/uhds/",
+                w3cid: "TBD"
             }],
             
-            // Impressive author list showing ecosystem support
             authors: [{
-                name: "Google Health Team",
-                company: "Google LLC",
-                companyURL: "https://health.google"
-            }, {
-                name: "Apple HealthKit Standards",
-                company: "Apple Inc.",
-                companyURL: "https://developer.apple.com/health-fitness/"
-            }, {
-                name: "Mayo Clinic Platform",
-                company: "Mayo Clinic",
-                companyURL: "https://www.mayoclinicplatform.org/"
-            }, {
-                name: "NIH All of Us Research Program",
-                company: "National Institutes of Health",
-                companyURL: "https://allofus.nih.gov/"
+                name: "UHDS Community Group",
+                url: "https://www.w3.org/community/uhds/",
+                company: "W3C UHDS Community Group",
+                companyURL: "https://www.w3.org/community/uhds/"
             }],
             
-            // Strategic GitHub setup
             github: {
-                repoURL: "https://github.com/UHDS-Standards/specification",
+                repoURL: "https://github.com/w3c/uhds",
                 branch: "main"
             },
             
-            // Multiple implementations showing real adoption
-            implementationReport: "https://w3id.org/uhds/implementations",
-            testSuite: "https://github.com/UHDS-Standards/test-suite",
+            testSuite: null,
             
-            // Industry alignment
-            alternateFormats: [{
-                uri: "https://w3id.org/uhds/spec.pdf",
-                label: "PDF"
-            }, {
-                uri: "https://w3id.org/uhds/spec.epub",
-                label: "EPUB"
-            }],
-            
-            // Legal & IP
-            copyrightStart: "2026",
-            license: "w3c-software-doc",
-            xref: {
-                specs: [
-                    "VC-DATA-MODEL-2.0",
-                    "DID-CORE",
-                    "JSON-LD11",
-                    "OWL2-OVERVIEW",
-                    "RFC2119",
-                    "RFC7519",
-                    "RFC8259",
-                    "RFC8949"
-                ],
-                profile: "web-platform"
-            },
-            
-            // Professional styling
             logos: [{
-                src: "https://w3id.org/uhds/logo.svg",
+                src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23005a9c'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-family='Arial, sans-serif' font-size='24'%3EUHDS%3C/text%3E%3C/svg%3E",
                 alt: "UHDS Logo",
                 width: 100,
                 height: 100,
-                url: "https://w3id.org/uhds"
+                url: "https://www.w3.org/community/uhds/"
             }],
             
-            // Strategic groups
             group: "cg/uhds",
             wgPublicList: "public-uhds@w3.org",
             
-            // Compliance frameworks
             localBiblio: {
                 "HIPAA": {
                     title: "Health Insurance Portability and Accountability Act",
@@ -159,7 +87,6 @@
                 }
             },
             
-            // Advanced features
             lint: {
                 "privsec-section": true,
                 "no-http-props": false
@@ -170,7 +97,6 @@
         // ]]>
     </script>
     <style>
-        /* Professional styling */
         .note.example {
             border-left: 4px solid #005a9c;
             background-color: #f0f8ff;
@@ -231,7 +157,6 @@
     </style>
 </head>
 <body>
-    <!-- Abstract that grabs attention -->
     <section id="abstract" class="introductory">
         <h2>Abstract</h2>
         <p>
@@ -240,7 +165,7 @@
             <a>Verifiable Credentials</a> and Zero-Knowledge Proofs. UHDS enables secure, 
             interoperable health data sharing across healthcare providers, research institutions, 
             wearable devices, and personal health applications while maintaining regulatory 
-            compliance with <a>GDPR</a>, <a>HIPAA</a>, and emerging digital health regulations.
+            compliance with [[GDPR]], [[HIPAA]], and emerging digital health regulations.
         </p>
         <p>
             This specification addresses the critical challenge of health data fragmentation 
@@ -258,7 +183,6 @@
         </div>
     </section>
 
-    <!-- Status gets noticed by W3C leadership -->
     <section id="sotd" class="introductory">
         <h2>Status of This Document</h2>
         <p>
@@ -310,12 +234,10 @@
         </div>
     </section>
 
-    <!-- Table of Contents -->
     <section id="toc" class="introductory">
         <h2>Table of Contents</h2>
     </section>
 
-    <!-- Introduction that shows deep understanding -->
     <section id="intro">
         <h2>Introduction</h2>
         
@@ -423,7 +345,6 @@
         </section>
     </section>
 
-    <!-- Core Terminology -->
     <section id="terminology">
         <h2>Terminology</h2>
         
@@ -485,7 +406,6 @@
         </div>
     </section>
 
-    <!-- Data Model - The Core Innovation -->
     <section id="data-model">
         <h2>Data Model</h2>
         
@@ -550,7 +470,7 @@
   "id": "urn:uuid:98c5cffc-7b48-4d5a-9a8a-123456789abc",
   "type": ["VerifiableCredential", "HealthCredential", "LabResult"],
   "issuer": "did:web:lab.hospital.example",
-  "issuanceDate": "2026-01-15T08:30:00Z",
+  "issuanceDate": "2024-01-15T08:30:00Z",
   "credentialSubject": {
     "id": "did:example:patient123",
     "testType": "https://loinc.org/4548-4",
@@ -575,7 +495,7 @@
   },
   "proof": {
     "type": "Ed25519Signature2020",
-    "created": "2026-01-15T08:30:00Z",
+    "created": "2024-01-15T08:30:00Z",
     "verificationMethod": "did:web:lab.hospital.example#key-1",
     "proofPurpose": "assertionMethod",
     "proofValue": "z58DAdFfa9SkqZMVPxAQpic7ndSayn1PzZs6ZjWp1CktyGesjuTSwRdoWhAfGFCF5bppETSTojQCrfFPP2oumHKtz"
@@ -804,7 +724,6 @@
         </section>
     </section>
 
-    <!-- Cryptographic Framework -->
     <section id="cryptography">
         <h2>Cryptographic Framework</h2>
         
@@ -1048,7 +967,6 @@ circuit BMIProof {
         </section>
     </section>
 
-    <!-- API Specification -->
     <section id="api">
         <h2>API Specification</h2>
         
@@ -1074,7 +992,7 @@ Authorization: Bearer &lt;issuer_token&gt;
     "testType": "https://loinc.org/4548-4",
     "result": 5.8,
     "unit": "%",
-    "collectionDateTime": "2026-01-15T07:00:00Z"
+    "collectionDateTime": "2024-01-15T07:00:00Z"
   },
   "options": {
     "privacyLevel": "pseudonymous",
@@ -1094,13 +1012,13 @@ Location: /api/v1/credentials/urn:uuid:98c5cffc-7b48-4d5a-9a8a-123456789abc
     "id": "urn:uuid:98c5cffc-7b48-4d5a-9a8a-123456789abc",
     "type": ["VerifiableCredential", "LabResult"],
     "issuer": "did:web:api.healthsystem.example",
-    "issuanceDate": "2026-01-15T08:30:00Z",
+    "issuanceDate": "2024-01-15T08:30:00Z",
     "credentialSubject": {...},
     "proof": {...}
   },
   "metadata": {
-    "issued": "2026-01-15T08:30:00Z",
-    "expires": "2026-04-15T08:30:00Z",
+    "issued": "2024-01-15T08:30:00Z",
+    "expires": "2024-04-15T08:30:00Z",
     "privacyLevel": "pseudonymous",
     "revocationIndex": "12345"
   }
@@ -1185,14 +1103,14 @@ Content-Type: application/json
     "publicInputs": {
       "min": 6.5,
       "max": 8.0,
-      "timestamp": "2026-01-15T09:00:00Z"
+      "timestamp": "2024-01-15T09:00:00Z"
     },
     "proofValue": "z3t4F...abC9X",
     "verificationKey": "https://w3id.org/uhds/keys/range_proof_vk"
   },
   "metadata": {
-    "generated": "2026-01-15T09:00:00Z",
-    "expires": "2026-01-22T09:00:00Z",
+    "generated": "2024-01-15T09:00:00Z",
+    "expires": "2024-01-22T09:00:00Z",
     "privacyLevel": "zero_knowledge"
   }
 }</pre>
@@ -1226,7 +1144,6 @@ Authorization: Bearer &lt;researcher_token&gt;
         </section>
     </section>
 
-    <!-- Regulatory Compliance -->
     <section id="compliance">
         <h2>Regulatory Compliance Framework</h2>
         
@@ -1396,7 +1313,6 @@ Authorization: Bearer &lt;researcher_token&gt;
         </section>
     </section>
 
-    <!-- Implementation Requirements -->
     <section id="implementation">
         <h2>Implementation Requirements</h2>
         
@@ -1589,7 +1505,6 @@ Authorization: Bearer &lt;researcher_token&gt;
         </section>
     </section>
 
-    <!-- Security Considerations -->
     <section id="security">
         <h2>Security Considerations</h2>
         
@@ -1734,7 +1649,6 @@ Authorization: Bearer &lt;researcher_token&gt;
         </section>
     </section>
 
-    <!-- Privacy Considerations -->
     <section id="privacy">
         <h2>Privacy Considerations</h2>
         
@@ -1824,7 +1738,7 @@ Authorization: Bearer &lt;researcher_token&gt;
     "sharing": false
   },
   "constraints": {
-    "validUntil": "2026-12-31T23:59:59Z",
+    "validUntil": "2024-12-31T23:59:59Z",
     "maxQueries": 100,
     "privacyBudget": {
       "epsilon": 2.0,
@@ -1855,7 +1769,6 @@ Authorization: Bearer &lt;researcher_token&gt;
         </section>
     </section>
 
-    <!-- Internationalization -->
     <section id="i18n">
         <h2>Internationalization and Localization</h2>
         
@@ -1912,7 +1825,6 @@ Authorization: Bearer &lt;researcher_token&gt;
         </section>
     </section>
 
-    <!-- Accessibility -->
     <section id="a11y">
         <h2>Accessibility</h2>
         
@@ -1941,7 +1853,6 @@ Authorization: Bearer &lt;researcher_token&gt;
         </ul>
     </section>
 
-    <!-- Ethical Considerations -->
     <section id="ethics">
         <h2>Ethical Considerations</h2>
         
@@ -1989,7 +1900,6 @@ Authorization: Bearer &lt;researcher_token&gt;
         </section>
     </section>
 
-    <!-- Appendices -->
     <section id="appendices" class="appendix">
         <h2>Appendices</h2>
         
@@ -2036,21 +1946,9 @@ Authorization: Bearer &lt;researcher_token&gt;
                 <tbody>
                     <tr>
                         <td>1.0.0-draft</td>
-                        <td>2026-01-15</td>
-                        <td>Initial Community Group Draft</td>
-                        <td>Irtiqa Lateef</td>
-                    </tr>
-                    <tr>
-                        <td>0.9.0</td>
-                        <td>2023-12-01</td>
-                        <td>Incorporated industry feedback</td>
-                        <td>Editorial Team</td>
-                    </tr>
-                    <tr>
-                        <td>0.8.0</td>
-                        <td>2023-10-15</td>
-                        <td>Added regulatory compliance sections</td>
-                        <td>Legal Team</td>
+                        <td>2024-01-01</td>
+                        <td>Initial Editor's Draft</td>
+                        <td>Amir Hameed Mir</td>
                     </tr>
                 </tbody>
             </table>
@@ -2060,7 +1958,7 @@ Authorization: Bearer &lt;researcher_token&gt;
             <h3>Appendix E: Acknowledgments</h3>
             
             <p>
-                The editors would like to thank the following individuals and 
+                The editor would like to thank the following individuals and 
                 organizations for their contributions to this specification:
             </p>
             
@@ -2082,7 +1980,6 @@ Authorization: Bearer &lt;researcher_token&gt;
         </section>
     </section>
 
-    <!-- References -->
     <section id="references" class="appendix">
         <h2>References</h2>
         
@@ -2207,7 +2104,6 @@ Authorization: Bearer &lt;researcher_token&gt;
         </section>
     </section>
 
-    <!-- Index -->
     <section id="index" class="appendix">
         <h2>Index</h2>
         
